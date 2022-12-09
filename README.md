@@ -43,7 +43,32 @@ sudo apt update
 sudo apt install jq
 ```
 
+```bash
+git clone https://github.com/Kr0wZ/Twitch-schedule
+cd Twitch-schedule
+chmod +x get_schedule.sh
+```
+
 You are no ready to use the tool!
+
+---
+# Usage
+
+```bash
+#Add execution permission to the script
+chmod +x get_schedule.sh
+
+#Get help message
+./get_schedule.sh -h
+
+#Retrieve schedule of specified user
+./get_schedule.sh -u 'USERNAME'
+```
+
+The schedule is displayed in the terminal as an iCalendar.
+You can choose tools such as https://larrybolt.github.io/online-ics-feed-viewer/ to see it. More information in my article: https://blog.synoslabs.com/osint/2022/12/06/osint-on-twitch.html#planning-schedule
+
+You can use this script in a cronjob to save the schedule each week for instance.
 
 ---
 # Resources
